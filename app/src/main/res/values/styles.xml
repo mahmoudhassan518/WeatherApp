@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="StyleSearchEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/colorTransparent</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">@color/colorBlueGrey</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_color</item>
+    </style>
+
+
+
+    <style name="loadingProgress" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="StylePageTitle">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+    </style>
+
+    <style name="StylePageSubTitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:lineSpacingExtra">1dp</item>
+
+    </style>
+
+</resources>

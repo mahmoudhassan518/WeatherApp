@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="label_done">Done</string>
+    <string name="label_error">Error</string>
+
+    <string name="msg_something_went_wrong">Something went wrong. Please try again later.</string>
+    <string name="msg_failed_to_get_user_location">Unable to get user location weather.</string>
+    <string name="msg_empty_search_city">Search bar is blank, please make sure to insert the city name.</string>
+    <string name="msg_search_city_length_validation">Search bar text is too short.</string>
+    <string name="msg_invalidate_query_search">Nothing to geocode.</string>
+    <string name="msg_invalidate_api_key">Invalid API key. Please use a new one.</string>
+
+    <string name="label_city_input">Enter city name</string>
+
+
+    <string name="label_retry">retry</string>
+    <string name="label_search">Search</string>
+
+    <string name="label_city_name">City Name: %1$s</string>
+    <string name="label_city_lat">City Latitude: %1$s</string>
+    <string name="label_city_lon">City Longitude: %1$s</string>
+</resources>

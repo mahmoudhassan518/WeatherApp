@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_promo_code_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_stroke_blue_grey_corners_5_dp"
+    android:orientation="horizontal"
+    android:paddingVertical="14dp"
+    android:paddingStart="13.5dp"
+    android:paddingEnd="0dp">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_promo_code"
+        style="@style/StyleSearchEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/label_city_input" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorLightPaleGrey" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingHorizontal="25dp"
+        android:text="@string/label_search"
+        android:textColor="@color/colorBlueGrey"
+        android:textSize="15sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

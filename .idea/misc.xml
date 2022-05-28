@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/bg_light_grey_stroke_corners_5_dp.xml" value="0.26205128205128203" />
+        <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/bg_primary_stroke_corners_5_dp.xml" value="0.26205128205128203" />
+        <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/ic_baseline_hourglass_empty_24.xml" value="0.26205128205128203" />
+        <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/ic_check.xml" value="0.26205128205128203" />
+        <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/ic_error.xml" value="0.26205128205128203" />
+        <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/ic_failed.xml" value="0.26205128205128203" />
+        <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/layout_state_view.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/view_promo_code_input.xml" value="0.4" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
