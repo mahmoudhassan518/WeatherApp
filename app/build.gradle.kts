@@ -9,13 +9,12 @@ android {
     compileSdk = 32
     defaultConfig {
         applicationId = "com.mahmoud.weatherapp"
-        minSdk =21
-        targetSdk= 32
+        minSdk = 21
+        targetSdk = 32
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
 
         testOptions {
             unitTests.isReturnDefaultValues = true
@@ -24,7 +23,6 @@ android {
 
     buildTypes {
 
-
         getByName("debug") {
             isDebuggable = true
         }
@@ -32,12 +30,10 @@ android {
         getByName("release") {
             isMinifyEnabled = false
             proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
             )
         }
-
-
     }
 
     kotlinOptions {
@@ -55,7 +51,6 @@ android {
         viewBinding = true
     }
 
-
     externalNativeBuild {
         cmake {
             path("CMakeLists.txt")
@@ -71,35 +66,35 @@ dependencies {
     implementation(Google.android.material)
     implementation(Google.Android.PlayServices.location)
 
-    //-------------------------------------------- lifecycle -------------------------------
+    // -------------------------------------------- lifecycle -------------------------------
     implementation(AndroidX.Core.ktx)
     implementation(AndroidX.activity.ktx)
     implementation(AndroidX.Lifecycle.viewModelKtx)
     implementation(AndroidX.Lifecycle.runtimeKtx)
     implementation(AndroidX.Lifecycle.liveDataKtx)
 
-    //-------------------------------------------- Dagger-Hilt -------------------------------
+    // -------------------------------------------- Dagger-Hilt -------------------------------
     implementation(Google.Dagger.Hilt.Android)
     annotationProcessor(Google.Dagger.Hilt.compiler)
     annotationProcessor(AndroidX.hilt.compiler)
     kapt(Google.Dagger.Hilt.compiler)
 
-    //--------------------- Coroutines + Flow + SharedFlow, StateFlow -------------------------
+    // --------------------- Coroutines + Flow + SharedFlow, StateFlow -------------------------
     implementation(KotlinX.coroutines.android)
 
-    //-------------------------------------------- Logging -------------------------------
+    // -------------------------------------------- Logging -------------------------------
     implementation(JakeWharton.timber)
 
-    //-------------------------------------------- retrofit -------------------------------
+    // -------------------------------------------- retrofit -------------------------------
     implementation(Libraries.Retrofit.gson)
     implementation(Libraries.Retrofit.retrofit)
     implementation(Libraries.Retrofit.retrofitGsonConverter)
 
-    //-------------------------------------------- okhttp3 -------------------------------
+    // -------------------------------------------- okhttp3 -------------------------------
     implementation(Libraries.Okhttp.okhttp)
     implementation(Libraries.Okhttp.okhttpLoggingInterceptor)
 
-    //-------------------------------------------- alerter -------------------------------
+    // -------------------------------------------- alerter -------------------------------
     implementation(Libraries.Utils.alerter)
 
 //    // -------------------------------------- Test -------------------------------
@@ -124,5 +119,4 @@ dependencies {
 //
 //    androidTestImplementation(Libs.Test.kaspresso)
 //    androidTestImplementation(Libs.Test.kotlintest)
-
 }

@@ -8,17 +8,17 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Singleton
 
-@InstallIn(SingletonComponent::class)
 @Module
+@InstallIn(SingletonComponent::class)
 class CoroutineModule {
 
-    @Singleton
     @Provides
+    @Singleton
     @MainDispatcher
     fun provideMainDispatcher(): CoroutineDispatcher = Dispatchers.Main
 
-    @Singleton
     @Provides
+    @Singleton
     @IODispatcher
     fun provideIODispatcher(): CoroutineDispatcher = Dispatchers.IO
 }

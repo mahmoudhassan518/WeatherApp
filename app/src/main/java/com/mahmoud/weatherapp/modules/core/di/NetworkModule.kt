@@ -16,7 +16,6 @@ import okhttp3.logging.HttpLoggingInterceptor
 import java.io.File
 import javax.inject.Singleton
 
-
 @Module
 @InstallIn(SingletonComponent::class)
 class NetworkModule {
@@ -34,7 +33,6 @@ class NetworkModule {
             .addInterceptor(loggingInterceptor)
             .cache(cache)
             .build()
-
 
     @Provides
     @Singleton

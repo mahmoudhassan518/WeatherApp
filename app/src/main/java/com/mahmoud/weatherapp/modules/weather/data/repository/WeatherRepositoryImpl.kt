@@ -1,7 +1,7 @@
 package com.mahmoud.weatherapp.modules.weather.data.repository
 
-import com.ksa.unticovid.modules.core.di.IODispatcher
 import com.mahmoud.weatherapp.base.BaseRepository
+import com.mahmoud.weatherapp.core.di.IODispatcher
 import com.mahmoud.weatherapp.modules.weather.data.model.mapper.toEntity
 import com.mahmoud.weatherapp.modules.weather.data.source.WeatherRemoteDS
 import com.mahmoud.weatherapp.modules.weather.domain.exception.InvalidApiKeyException
@@ -26,7 +26,6 @@ class WeatherRepositoryImpl @Inject constructor(
         requestHandler(buildWeatherErrorMap()) {
             source.getCoordinatorWeather(param).toEntity()
         }
-
 
     private fun buildWeatherErrorMap() = mapOf(
         401 to InvalidApiKeyException,

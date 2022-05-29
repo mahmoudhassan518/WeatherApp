@@ -1,8 +1,8 @@
 package com.mahmoud.weatherapp.modules.weather.presentation.viewmodel
 
-import com.ksa.unticovid.modules.core.di.MainDispatcher
 import com.mahmoud.weatherapp.R
 import com.mahmoud.weatherapp.base.BaseViewModel
+import com.mahmoud.weatherapp.core.di.MainDispatcher
 import com.mahmoud.weatherapp.modules.location.domain.exception.FailedToGetLocationException
 import com.mahmoud.weatherapp.modules.weather.domain.exception.EmptySearchCityException
 import com.mahmoud.weatherapp.modules.weather.domain.exception.InvalidApiKeyException
@@ -21,14 +21,13 @@ import javax.inject.Inject
 
 @HiltViewModel
 class WeatherViewModel @Inject constructor(
-    @MainDispatcher val mainDispatcher: CoroutineDispatcher,
+    @MainDispatcher private val mainDispatcher: CoroutineDispatcher,
     private val getCoordinatorWeatherUseCase: GetCoordinatorWeatherUseCase,
     private val getCityWeatherUseCase: GetCityWeatherUseCase
 ) : BaseViewModel<WeatherUIState, WeatherEffects, WeatherEvents>(
     mainDispatcher,
     WeatherUIState()
 ) {
-
 
     override fun transform(event: WeatherEvents) {
         when (event) {
@@ -89,7 +88,6 @@ class WeatherViewModel @Inject constructor(
         }
     }
 
-
     private fun Throwable.handleError(): Int =
         when (this) {
             is FailedToGetLocationException -> R.string.msg_failed_to_get_user_location
@@ -99,6 +97,4 @@ class WeatherViewModel @Inject constructor(
             is InvalidApiKeyException -> R.string.msg_invalidate_query_search
             else -> R.string.msg_something_went_wrong
         }
-
-
 }
