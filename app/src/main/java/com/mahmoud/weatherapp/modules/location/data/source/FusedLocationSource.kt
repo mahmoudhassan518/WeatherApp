@@ -8,7 +8,6 @@ import com.mahmoud.weatherapp.modules.location.domain.exception.FailedToGetLocat
 import kotlinx.coroutines.flow.callbackFlow
 import javax.inject.Inject
 
-
 class FusedLocationSource @Inject constructor(private val client: FusedLocationProviderClient) {
 
     @SuppressLint("MissingPermission")
@@ -16,11 +15,9 @@ class FusedLocationSource @Inject constructor(private val client: FusedLocationP
         client.lastLocation.addOnSuccessListener { location: Location? ->
             // Got last known location. In some rare situations this can be null.
             if (location == null)
-                throw  FailedToGetLocationException
+                throw FailedToGetLocationException
             else
                 trySend(LocationDto(lat = location.latitude, lon = location.longitude))
-
         }
     }
-
 }

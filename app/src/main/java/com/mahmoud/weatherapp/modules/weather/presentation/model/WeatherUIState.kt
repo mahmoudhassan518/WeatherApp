@@ -1,6 +1,5 @@
 package com.mahmoud.weatherapp.modules.weather.presentation.model
 
-
 data class WeatherUIState(
     val loading: Boolean = false,
     val error: Int? = null,

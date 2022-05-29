@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class GetCityWeatherUseCase @Inject constructor(
     private val repository: WeatherRepository,
-) : FlowUseCase<String, WeatherEntity>() {
+) : FlowUseCase<String, WeatherEntity> {
 
     override fun invoke(param: String): Flow<WeatherEntity> =
         repository.getCityWeather(param)

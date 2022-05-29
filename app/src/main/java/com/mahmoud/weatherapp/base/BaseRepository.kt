@@ -10,7 +10,6 @@ import okhttp3.ResponseBody
 import retrofit2.HttpException
 import timber.log.Timber
 
-
 abstract class BaseRepository(
     private val ioDispatcher: CoroutineDispatcher
 ) {
@@ -30,7 +29,6 @@ abstract class BaseRepository(
         }
     }.flowOn(ioDispatcher)
 
-
     private fun HttpException.getHttpException(errorMap: Map<Int, Throwable>): Throwable =
         try {
             val body: ResponseBody? = this.response()!!.errorBody()
@@ -39,10 +37,8 @@ abstract class BaseRepository(
                 Gson().fromJson(body!!.string(), ErrorResponse::class.java)
 
             errorMap[this.response()?.code()] ?: errorMap[errorsResponse.cod]
-            ?: UnexpectedResponseException
+                ?: UnexpectedResponseException
         } catch (e: Exception) {
             UnexpectedResponseException
         }
-
-
 }

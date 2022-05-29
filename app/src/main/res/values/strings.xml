@@ -10,13 +10,26 @@
     <string name="msg_invalidate_query_search">Nothing to geocode.</string>
     <string name="msg_invalidate_api_key">Invalid API key. Please use a new one.</string>
 
-    <string name="label_city_input">Enter city name</string>
+    <string name="label_city_input">City (cairo, london,…)</string>
 
 
     <string name="label_retry">retry</string>
     <string name="label_search">Search</string>
 
-    <string name="label_city_name">City Name: %1$s</string>
-    <string name="label_city_lat">City Latitude: %1$s</string>
-    <string name="label_city_lon">City Longitude: %1$s</string>
+    <string name="label_city">City name</string>
+    <string name="label_lat">City geo location, longitude</string>
+    <string name="label_lon">City geo location, latitude</string>
+    <string name="label_weather">weather</string>
+    <string name="label_weather_description">weather description</string>
+    <string name="label_temperature">Temperature</string>
+    <string name="label_maximum_temperature">Maximum temperature at the moment. This is maximal currently observed temperature (within large megalopolises and urban areas).</string>
+    <string name="label_minimum_temperature">Minimum temperature at the moment. This is minimal currently observed temperature (within large megalopolises and urban areas).</string>
+    <string name="label_atmospheric_pressure">Atmospheric pressure</string>
+    <string name="label_humidity_percentage">Humidity</string>
+    <string name="label_visibility">Visibility, meter. The maximum value of the visibility is 10km</string>
+    <string name="label_wind_speed">Wind speed. Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour.</string>
+    <string name="label_wind_direction">Wind direction, degrees (meteorological)</string>
+    <string name="label_clouds_percentage">Cloudiness</string>
+    <string name="label_sunrise_time">Sunrise time</string>
+    <string name="label_sunset_time">Sunset time</string>
 </resources>

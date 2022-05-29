@@ -8,9 +8,8 @@ import javax.inject.Inject
 
 class GetUserLocationUseCase @Inject constructor(
     private val repository: LocationRepository,
-) : FlowUseCase<Unit, LocationEntity>() {
+) : FlowUseCase<Unit, LocationEntity> {
 
     override fun invoke(param: Unit): Flow<LocationEntity> =
         repository.getUserLocation()
-
 }

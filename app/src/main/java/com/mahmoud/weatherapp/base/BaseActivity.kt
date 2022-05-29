@@ -5,7 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.viewbinding.ViewBinding
 
-abstract class BaseActivity<STATE, EFFECT, EVENT, T : ViewBinding, VM : BaseViewModel<STATE, EFFECT, EVENT>>() : AppCompatActivity() {
+abstract class BaseActivity<STATE, EFFECT, EVENT, T : ViewBinding, VM : BaseViewModel<STATE, EFFECT, EVENT>>() :
+    AppCompatActivity() {
 
     protected lateinit var binding: T
 
@@ -13,8 +14,8 @@ abstract class BaseActivity<STATE, EFFECT, EVENT, T : ViewBinding, VM : BaseView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
         binding = bindView()
+        setContentView(binding.root)
 
         setup()
 
@@ -31,8 +32,6 @@ abstract class BaseActivity<STATE, EFFECT, EVENT, T : ViewBinding, VM : BaseView
                 renderEffect(it)
             }
         }
-
-
     }
 
     abstract fun setup()

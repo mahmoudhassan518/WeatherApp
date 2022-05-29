@@ -2,7 +2,6 @@ package com.mahmoud.weatherapp.modules.core.data
 
 import com.mahmoud.weatherapp.modules.weather.data.model.WeatherResponse
 import retrofit2.http.GET
-import retrofit2.http.Query
 import retrofit2.http.QueryMap
 
 interface ApiService {

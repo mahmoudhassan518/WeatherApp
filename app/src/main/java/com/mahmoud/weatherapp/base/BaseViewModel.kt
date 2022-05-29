@@ -9,11 +9,11 @@ import com.mahmoud.weatherapp.core.utils.Reducer
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
 
 abstract class BaseViewModel<STATE, EFFECT, EVENT>(
     private val mainDispatcher: CoroutineDispatcher,
@@ -38,7 +38,6 @@ abstract class BaseViewModel<STATE, EFFECT, EVENT>(
 
     private val _effect: MutableSharedFlow<EFFECT> = MutableSharedFlow()
     val effect = _effect.asSharedFlow()
-
 
     // Get Current State
     protected val currentState: STATE

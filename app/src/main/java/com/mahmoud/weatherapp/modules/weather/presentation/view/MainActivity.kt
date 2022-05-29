@@ -1,5 +1,7 @@
 package com.mahmoud.weatherapp.modules.weather.presentation.view
 
+import android.Manifest
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import com.mahmoud.weatherapp.base.BaseActivity
 import com.mahmoud.weatherapp.core.extentions.showAlerterError
@@ -16,15 +18,36 @@ class MainActivity :
 
     override val viewModel: WeatherViewModel by viewModels()
 
-    override fun setup() {
+    private val locationPermissionRequest = registerForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { permissions ->
+        when {
+            permissions.getOrDefault(Manifest.permission.ACCESS_FINE_LOCATION, false) -> {
+                // Precise location access granted.
+                getUserWeather()
+            }
+            permissions.getOrDefault(Manifest.permission.ACCESS_COARSE_LOCATION, false) -> {
+                // Only approximate location access granted.
+                getUserWeather()
+            }
+            else -> {
+                // No location access granted.
+            }
+        }
+    }
 
+    private fun getUserWeather() {
+        viewModel.setEvent(WeatherEvents.GetUserWeather)
     }
 
     override fun bindView(): ActivityMainBinding =
         ActivityMainBinding.inflate(layoutInflater)
 
-    override fun renderState(state: WeatherUIState) {
+    override fun setup() {
+        requestLocationPermission()
+    }
 
+    override fun renderState(state: WeatherUIState) {
     }
 
     override fun renderEffect(effect: WeatherEffects) {
@@ -32,4 +55,11 @@ class MainActivity :
             is WeatherEffects.ShowWeatherError -> showAlerterError(errorMessage = getString(effect.message))
         }
     }
+
+    private fun requestLocationPermission() = locationPermissionRequest.launch(
+        arrayOf(
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION
+        )
+    )
 }

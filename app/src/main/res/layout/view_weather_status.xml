@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_city" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_lat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_lat" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_lon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_lon" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_weather" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_weather_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_weather_description" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_temperature" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_maximum_temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_maximum_temperature" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_minimum_temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_minimum_temperature" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_atmospheric_pressure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_atmospheric_pressure" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_humidity_percentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_humidity_percentage" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_visibility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_visibility" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_wind_speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_wind_speed" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_wind_direction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_wind_direction" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_clouds_percentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_clouds_percentage" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_sunrise_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_sunrise_time" />
+
+    <com.mahmoud.weatherapp.modules.core.presentation.custom_view.WeatherStatusView
+        android:id="@+id/view_status_sunset_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_label="@string/label_sunset_time" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

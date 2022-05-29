@@ -12,11 +12,10 @@ import javax.inject.Inject
 class GetCoordinatorWeatherUseCase @Inject constructor(
     private val repository: WeatherRepository,
     private val getUserLocationUseCase: GetUserLocationUseCase
-) : FlowUseCase<Unit, WeatherEntity>() {
+) : FlowUseCase<Unit, WeatherEntity> {
 
     override fun invoke(param: Unit): Flow<WeatherEntity> =
         getUserLocationUseCase(Unit).flatMapMerge {
             repository.getCoordinatorWeather(WeatherParam(lat = it.lat, lon = it.lon))
         }
-
 }
