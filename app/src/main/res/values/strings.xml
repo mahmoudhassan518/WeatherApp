@@ -5,9 +5,11 @@
 
     <string name="msg_something_went_wrong">Something went wrong. Please try again later.</string>
     <string name="msg_failed_to_get_user_location">Unable to get user location weather.</string>
+    <string name="msg_city_field_required">city field is required.</string>
     <string name="msg_empty_search_city">Search bar is blank, please make sure to insert the city name.</string>
     <string name="msg_search_city_length_validation">Search bar text is too short.</string>
     <string name="msg_invalidate_query_search">Nothing to geocode.</string>
+    <string name="msg_no_city_found">City Not Found.</string>
     <string name="msg_invalidate_api_key">Invalid API key. Please use a new one.</string>
 
     <string name="label_city_input">City (cairo, london,…)</string>
@@ -32,4 +34,6 @@
     <string name="label_clouds_percentage">Cloudiness</string>
     <string name="label_sunrise_time">Sunrise time</string>
     <string name="label_sunset_time">Sunset time</string>
+
+    <string name="msg_failed_to_load_user_weather">Failed to get user location weather!\n tap to retry</string>
 </resources>

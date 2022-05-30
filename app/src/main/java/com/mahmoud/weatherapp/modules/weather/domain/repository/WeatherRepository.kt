@@ -7,5 +7,5 @@ import kotlinx.coroutines.flow.Flow
 interface WeatherRepository {
 
     fun getCityWeather(city: String): Flow<WeatherEntity>
-    fun getCoordinatorWeather(param: WeatherParam): Flow<WeatherEntity>
+    fun getUserWeather(param: WeatherParam): Flow<WeatherEntity>
 }

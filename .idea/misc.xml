@@ -9,9 +9,12 @@
         <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/ic_check.xml" value="0.26205128205128203" />
         <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/ic_error.xml" value="0.26205128205128203" />
         <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/ic_failed.xml" value="0.26205128205128203" />
-        <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/layout_state_view.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/view_promo_code_input.xml" value="0.4" />
+        <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/view_status.xml" value="0.17300724637681159" />
+        <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/view_user_location_status.xml" value="0.4" />
+        <entry key="..\:/Users/mahha/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/view_weather_status.xml" value="0.1" />
       </map>
     </option>
   </component>

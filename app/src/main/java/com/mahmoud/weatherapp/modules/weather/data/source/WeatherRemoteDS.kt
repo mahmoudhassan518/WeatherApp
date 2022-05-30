@@ -14,7 +14,7 @@ class WeatherRemoteDS @Inject constructor(private val apiService: ApiService) {
             "q" to this
         )
 
-    suspend fun getCoordinatorWeather(param: WeatherParam) =
+    suspend fun getUserWeather(param: WeatherParam) =
         apiService.getWeather(param.buildWeatherCityParam())
 
     private fun WeatherParam.buildWeatherCityParam() =

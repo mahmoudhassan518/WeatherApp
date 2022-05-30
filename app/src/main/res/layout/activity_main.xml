@@ -9,23 +9,33 @@
     tools:context=".modules.weather.presentation.view.MainActivity">
 
 
-    <include layout="@layout/view_promo_code_input"
-        android:id="@+id/view_promo_code_input"/>
+    <include
+        android:id="@+id/view_promo_code_input"
+        layout="@layout/view_promo_code_input" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/view_promo_code_input"
-        app:layout_constraintBottom_toBottomOf="parent">
-        <include layout="@layout/view_weather_status"
-            android:id="@+id/view_weather_status"
-            />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_promo_code_input">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/view_weather_status"
+                layout="@layout/view_weather_status" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.core.widget.NestedScrollView>
 
     <com.mahmoud.weatherapp.core.custom_view.StateViewLayout
         android:id="@+id/layout_state_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_promo_code_input" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

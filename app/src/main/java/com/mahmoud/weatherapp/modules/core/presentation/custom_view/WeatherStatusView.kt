@@ -30,7 +30,7 @@ class WeatherStatusView @JvmOverloads constructor(
         binding.tvKey.text = key
     }
 
-    fun setValue(value: String) {
+    fun setValue(value: String?) {
         binding.tvValue.text = value
     }
 }

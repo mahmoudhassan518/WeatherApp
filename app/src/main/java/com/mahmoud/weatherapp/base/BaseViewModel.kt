@@ -16,7 +16,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
 abstract class BaseViewModel<STATE, EFFECT, EVENT>(
-    private val mainDispatcher: CoroutineDispatcher,
+    private val dispatcher: CoroutineDispatcher,
     initialState: STATE
 ) : ViewModel() {
 
@@ -64,7 +64,7 @@ abstract class BaseViewModel<STATE, EFFECT, EVENT>(
         block: suspend CoroutineScope.() -> Unit
     ) {
         onStart?.invoke()
-        viewModelScope.launch(mainDispatcher + coroutineExceptionHandler(onError)) {
+        viewModelScope.launch(dispatcher + coroutineExceptionHandler(onError)) {
             block.invoke(this)
         }
     }

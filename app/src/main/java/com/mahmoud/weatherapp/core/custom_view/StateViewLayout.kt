@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
+import com.mahmoud.weatherapp.core.utils.Action
 import com.mahmoud.weatherapp.databinding.LayoutStateViewBinding
 
 class StateViewLayout @JvmOverloads constructor(
@@ -20,23 +21,27 @@ class StateViewLayout @JvmOverloads constructor(
         addView(binding.root)
     }
 
-    fun showLoading(loading: Boolean, backgroundColor: Int = android.R.color.transparent) {
+    fun showLoading(loading: Boolean) {
         binding.root.isVisible = loading
         binding.cvLoading.isVisible = loading
         binding.clError.isVisible = false
+    }
 
+    fun showError(error: String?, retry: Action? = null) {
+        binding.clError.isVisible = error != null
+        binding.root.isVisible = error != null
+        binding.cvLoading.isVisible = false
+        binding.tvErrorMessage.text = error
+        binding.tvRetry.setOnClickListener {
+            retry?.invoke()
+        }
+    }
+
+    fun setStateViewBackgroundColor(backgroundColor: Int) =
         binding.root.setBackgroundColor(
             ContextCompat.getColor(
                 context,
                 backgroundColor
             )
         )
-    }
-
-    fun showError(error: String) {
-        binding.clError.isVisible = true
-        binding.root.isVisible = true
-        binding.cvLoading.isVisible = false
-        binding.tvErrorMessage.text = error
-    }
 }
