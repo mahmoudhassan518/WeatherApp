@@ -3,6 +3,7 @@ package com.mahmoud.weatherapp.modules.weather.presentation.view
 import android.Manifest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import com.mahmoud.weatherapp.R
 import com.mahmoud.weatherapp.base.BaseActivity
 import com.mahmoud.weatherapp.core.extentions.showAlerterError
 import com.mahmoud.weatherapp.databinding.ActivityMainBinding
@@ -45,10 +46,28 @@ class MainActivity :
 
     override fun setup() {
         requestLocationPermission()
+        initActions()
     }
 
-    override fun renderState(state: WeatherUIState) {
+    private fun initActions() {
+        binding.viewPromoCodeInput.tvSearch.setOnClickListener {
+            viewModel.setEvent(WeatherEvents.GetCityWeather(binding.viewPromoCodeInput.etCity.text.toString()))
+        }
     }
+
+    override fun renderState(state: WeatherUIState) = with(state) {
+        binding.layoutStateView.showLoading(
+            loading,
+            getStateViewBackgroundColor()
+        )
+        error?.let {
+            binding.layoutStateView.showError(getString(it))
+        }
+    }
+
+    private fun WeatherUIState.getStateViewBackgroundColor() =
+        if (weather == null) android.R.color.white
+        else R.color.colorTransparent
 
     override fun renderEffect(effect: WeatherEffects) {
         when (effect) {

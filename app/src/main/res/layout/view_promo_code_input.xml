@@ -10,7 +10,7 @@
     android:paddingEnd="0dp">
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/et_promo_code"
+        android:id="@+id/et_city"
         style="@style/StyleSearchEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         android:background="@color/colorLightPaleGrey" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_apply"
+        android:id="@+id/tv_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

@@ -23,7 +23,9 @@
             />
     </androidx.core.widget.NestedScrollView>
 
-    <include layout="@layout/layout_state_view"
-        android:id="@+id/layout_state_view"/>
+    <com.mahmoud.weatherapp.core.custom_view.StateViewLayout
+        android:id="@+id/layout_state_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
